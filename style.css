@@ -1,0 +1,853 @@
+/* --- RESET & BASIC STYLES --- */
+
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+.wrapper {
+  width: 1440px;
+  height: 3979px;
+
+  opacity: 1;
+}
+body {
+ transition: 0.3s;
+ font-family: "Poppins", sans-serif;
+ background: #f4f4f4;
+ color: #000;
+}
+
+
+/* DARK */
+.dark {
+ background: #121212;
+ color: #fff;
+}
+
+.container {
+ text-align: center;
+ margin-top: 100px;
+}
+
+.button {
+ padding: 10px 20px;
+ margin: 10px;
+ cursor: pointer;
+}
+
+/* --- UTILITY CLASSES (Yordamchi klasslar) --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.text-blue {
+  color: #1a73e8; /* Ko'k rang */
+}
+
+/* --- BLOCK: btn (Tugmalar) --- */
+.btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn--primary {
+  background-color: #1a73e8;
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background-color: #155bb5;
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* --- BLOCK: badge (Nishonlar) --- */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  /* background-color: #e0f0ff; */
+  color: #1a73e8;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.badge--white {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* --- BLOCK: header (Xeder) --- */
+.header {
+  /* background-color: #ffffff; */
+  padding: 20px 0;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo img {
+  height: 40px; /* Logotip balandligi */
+}
+
+/* Element: nav (Navigatsiya) */
+.nav__list {
+  display: flex;
+  gap: 30px;
+}
+
+.nav__link {
+  color: #333333;
+  font-weight: 500;
+}
+
+.nav__link:hover {
+  color: #1a73e8;
+}
+
+/* Element: actions (Harakatlar) */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__login {
+  font-weight: 500;
+}
+
+/* --- BLOCK: hero (Gero) --- */
+.hero {
+  /* background-color: #ffffff; */
+  padding: 160px 0 100px;
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.hero__title {
+  width: 390px;
+  height: 82px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 100%;
+}
+
+.hero__subtitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  width: 390px;
+  height: 40px;
+}
+
+.hero__download-apps {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.hero__download-apps img {
+  width: 124px;
+  height: 36px;
+}
+
+.hero__car img {
+  width: 100%;
+}
+
+/* Element: search-panel (Qidiruv paneli) */
+.search-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 12px 12px 32px;
+  gap: 50px;
+  position: absolute;
+  top: 360px;
+  width: 1120px;
+  height: 62px;
+  left: 160px;
+  top: 680px;
+
+  /* background: #ffffff; */
+  box-shadow: 0px 6px 12px rgba(19, 94, 172, 0.12);
+  border-radius: 12px;
+}
+.search_input {
+  width: 116px;
+  height: 10px;
+}
+
+.search-panel__group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-panel__group label {
+  color: #3e3e3e;
+  margin-bottom: 5px;
+  font-family: "Poppins";
+  font-weight: 500;
+
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+.search-panel__group input,
+.search-panel__group select {
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  font-weight: 500;
+}
+
+/* --- BLOCK: steps (Qadamlar) --- */
+.steps {
+  text-align: center;
+}
+
+.steps__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.steps__grid {
+  display: flex;
+  gap: 30px;
+  width: 736;
+  height: 221;
+
+  opacity: 1;
+  gap: 200px;
+}
+
+/* BLOCK: card-step (Qadam kartasi) */
+.card-step__icon {
+  width: 60px;
+  height: 60px;
+  /* background-color: #e0f0ff; */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+}
+
+.card-step__title {
+  font-family: "Poppins";
+  font-weight: 500;
+
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+.card-step__text {
+  font-family: "Poppins";
+  font-weight: 500;
+
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+/* --- BLOCK: partners (Hamkorlar) --- */
+.card-brands {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 8%;
+}
+
+.card-brands img {
+  max-height: 50px;
+}
+/* WHY CHOOSE US */
+.why-section {
+  padding: 100px 0;
+}
+
+.why-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.why-image {
+  flex: 1;
+  position: relative;
+}
+
+/* .bg-shape {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #edf4ff;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  z-index: -1;
+} */
+
+.why-image img {
+  width: 100%;
+  max-width: 650px;
+}
+
+.why-content {
+  flex: 1;
+}
+
+.section-tag {
+  display: inline-block;
+  background: #edf4ff;
+  color: #1572ff;
+
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+.why-content h2 {
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  color: #262626;
+}
+
+.feature-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.icon-box {
+  min-width: 52px;
+  height: 52px;
+  background: #edf4ff;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-item h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.feature-item p {
+  line-height: 1.8;
+}
+
+/* --- ASOSIY SECTION --- */
+.cars-section {
+  padding: 80px 0;
+  /* background-color: #ffffff; */
+  display: flex;
+  justify-content: center;
+}
+
+.cars-container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 20px;
+}
+
+/* --- SARLAVHA QISMI --- */
+.cars-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.cars-badge {
+  display: inline-block;
+  /* background-color: #edf4ff; */
+  color: #1572ff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 10px 22px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.cars-title {
+  font-size: 38px;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+.saerch-cars{
+  width: 350px;
+  height: 60px;
+  font-size: 18px;
+  font-family: "Poppins";
+}
+
+/* --- TO'RTLIK GRID --- */
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* --- HAR BIR ALOHIDA KARTA --- */
+.car-item-card {
+  /* background: #ffffff; */
+  border-radius: 16px;
+  box-shadow: 0px 16px 48px rgba(16, 76, 139, 0.07);
+  border: 1px solid rgba(16, 76, 139, 0.03);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.car-item-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 20px 56px rgba(16, 76, 139, 0.13);
+}
+
+/* Rasm qutisi */
+.car-img-box {
+  padding: 0px 24px 8px 24px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.car-img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: relative;
+}
+.like {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  transition: all 200ms linear;
+}
+.like:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.button{
+    padding: 4px 8px;
+    border:none;
+    border-radius:6px;
+    background-color: darkblue;
+    color: white;
+    font-family: italic;
+    font-weight: 300;
+   transform: all 200ms linear;
+   
+}
+.button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.button:active{
+    transform: scale(0.1);
+  
+}
+.hiddenCar{
+    display: none;
+}
+
+/* Karta ichi */
+.car-body {
+  padding: 16px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 6px;
+}
+
+/* Reyting (Yulduzcha) */
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+
+.star-color {
+  color: #ffb800;
+}
+
+.rating-number {
+  font-weight: 600;
+  color: #262626;
+}
+
+.rating-text {
+  color: #9c9c9c;
+}
+
+/*  (Specs) */
+.card-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 10px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #f2f4f7;
+}
+
+.spec-item {
+  font-size: 12px;
+  color: #9c9c9c;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spec-item i {
+  font-size: 15px;
+  color: #b3b3b3;
+}
+
+/* Kartaning pastki qismi (Narx va Tugma) */
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.price-title {
+  font-size: 13px;
+  color: #9c9c9c;
+}
+
+.price-number {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+.price-day {
+  font-size: 12px;
+  font-weight: 400;
+  color: #9c9c9c;
+}
+
+/* rent button */
+.rent-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #1572ff;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.rent-btn:hover {
+  background-color: #0c5cd6;
+}
+
+
+.bottom-box {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.see-all-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  background-color: transparent;
+  color: #595959;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transform: all 200ms linear;
+}
+.seeBtn{
+  display: flex;
+  justify-content: center;
+}
+
+.see-all-btn:hover {
+  border-color: #1572ff;
+  color: #1572ff;
+  background-color: #f5f9ff;
+}
+
+/* DOWNLOAD SECTION STYLES  */
+.download-section {
+  padding: 80px 0 0 0; 
+  
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.download-container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.download-content {
+  max-width: 500px;
+}
+
+.download-badge {
+  display: inline-block;
+ 
+  color: #1572ff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+
+.download-title {
+  font-size: 44px;
+  font-weight: 600;
+  color: #1e1e1e;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.text-blue {
+  color: #1572ff;
+}
+
+.download-text {
+  font-size: 16px;
+  color: #595959;
+  margin-bottom: 40px;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.store-btn img {
+  height: 48px;
+  transition: transform 0.2s ease;
+}
+
+.store-btn img:hover {
+  transform: scale(1.03);
+}
+
+/* --- TELEFON  */
+.download-phone {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: -40px; 
+}
+
+
+
+
+/*  FOOTER   */
+.main-footer {
+  background-color: #05162e;
+  color: #929ba6;
+  padding: 80px 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1440px;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Nozik ajratuvchi chiziq */
+}
+
+/* 1.Kompaniya logo */
+.company-info .footer-logo {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.company-info .footer-logo i {
+  color: #1572ff;
+  font-size: 20px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.contact-item i {
+  font-size: 16px;
+  color: #1572ff;
+}
+
+/*  Linklar */
+.footer-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: #929ba6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/*  (Social Icons) */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.social-icons a:hover {
+  background-color: #1572ff;
+  border-color: #1572ff;
+}
+
+/*  (Footer Bottom) */
+.footer-bottom {
+  padding-top: 30px;
+  font-size: 12px;
+  color: #657181;
+}
